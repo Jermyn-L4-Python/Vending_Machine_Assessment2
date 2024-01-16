@@ -33,17 +33,16 @@ def main():
         Menu = {"A148" : "Lays", 
                 "A290" : "Kitkat", 
                 "A123" : "Snickers", 
-                "B143" : "Cheeetos", 
+                "B143" : "Cheetos", 
                 "B239" : "CocaCola", 
                 "A000" : "Water", 
                 "C257" : "Orange Juice"}
 
         print(Menu)
-
+        
         while order not in Menu:
             order = input("\nCode: ")
         
-
             if order == "A148":
                 Price = float(5.20)
 
@@ -95,10 +94,14 @@ def main():
             if answered == answer:
                 print("\nTING TING TING! YOU ARE CORRECT. ENJOY YOUR FREE ITEM!")
                 print(f"Here is your money back: ${Pay}")
+                Price = 0
+                Pay = 0
             else:
-                print("\nCongratulations! That is wrong :((")
-                change = float(Pay - Price)
-                print(f"Here is your change: ${change}\n")
+                print("Congratulations! That is wrong :((")
+        
+        change = float(Pay - Price)
+        print(f"Here is your change: ${change}\n")
+
 
      #Display the item   
         for key, value in Menu.items():
